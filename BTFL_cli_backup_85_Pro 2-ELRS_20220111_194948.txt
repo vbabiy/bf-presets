@@ -1,0 +1,123 @@
+defaults nosave
+
+# diff all
+
+# version
+# Betaflight / BETAFPVF4SX1280 (BHER) 4.3.0 Dec 24 2021 / 17:08:11 (norevision) MSP API: 1.44
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name BETAFPVF4SX1280
+mcu_id 006600293036510936383539
+signature 
+
+# name: 85 Pro 2-ELRS
+
+# resources
+resource PPM 1 A10
+
+# timer
+timer A02 AF2
+# pin A02: TIM5 CH3 (AF2)
+
+# dma
+dma pin A10 NONE
+
+# serial
+serial 30 2048 115200 57600 0 115200
+
+# led
+led 0 0,0::A:0
+led 1 1,0::A:0
+
+# aux
+aux 0 0 0 1600 2100 0 0
+aux 1 1 1 900 1300 0 0
+aux 2 2 1 1325 1700 0 0
+aux 3 13 3 1700 2100 0 0
+aux 4 35 2 1550 2100 0 0
+
+# vtxtable
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable powerlevels 4
+vtxtable powervalues 0 1 2 3
+vtxtable powerlabels 25 100 200 350
+
+# master
+set acc_calibration = -10,0,93,1
+set max_check = 2000
+set dshot_idle_value = 450
+set motor_pwm_protocol = DSHOT600
+set yaw_motors_reversed = ON
+set small_angle = 180
+set osd_vbat_pos = 2391
+set osd_rssi_pos = 2276
+set osd_link_quality_pos = 2244
+set osd_link_tx_power_pos = 2308
+set osd_rssi_dbm_pos = 2212
+set osd_tim_2_pos = 2403
+set osd_flymode_pos = 2371
+set osd_crosshairs_pos = 2253
+set osd_current_pos = 2422
+set osd_craft_name_pos = 2410
+set osd_core_temp_pos = 2230
+set vtx_band = 4
+set vtx_channel = 8
+set vtx_power = 4
+set vtx_low_power_disarm = ON
+set vtx_freq = 5880
+set expresslrs_uid = 240,8,126,196,44,92
+set expresslrs_rate_index = 1
+set name = 85 Pro 2-ELRS
+
+profile 0
+
+# profile 0
+set i_pitch = 99
+set d_pitch = 35
+set f_pitch = 105
+set i_roll = 96
+set d_roll = 34
+set f_roll = 99
+set p_yaw = 48
+set i_yaw = 99
+set f_yaw = 99
+set d_min_roll = 0
+set d_min_pitch = 0
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set tpa_rate = 60
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
